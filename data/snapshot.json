@@ -1,203 +1,163 @@
 {
   "words": {
-    "lakuri": {
-      "meaning": "high",
+    "kunvam": {
+      "meaning": "fast",
       "category": "quality",
-      "born": 3107,
-      "uses": 22,
-      "fitness": 0.19999999999999885,
+      "born": 3246,
+      "uses": 24,
+      "fitness": 0.20000000000000068,
       "history": [
-        "lakuri"
+        "kunvam"
       ]
     },
-    "kiori": {
-      "meaning": "self",
-      "category": "being",
-      "born": 3119,
-      "uses": 17,
-      "fitness": 0.2999999999999995,
-      "history": [
-        "kiori"
-      ]
-    },
-    "okena": {
+    "kute": {
       "meaning": "sun",
       "category": "natural",
-      "born": 3126,
-      "uses": 10,
-      "fitness": 0.2500000000000001,
+      "born": 3256,
+      "uses": 20,
+      "fitness": 0.19999999999999857,
       "history": [
-        "okena"
+        "kute"
       ]
     },
-    "nisevi": {
-      "meaning": "connection",
-      "category": "abstract",
-      "born": 3127,
-      "uses": 9,
-      "fitness": 0.10000000000000013,
-      "history": [
-        "nisevi"
-      ]
-    },
-    "netu": {
-      "meaning": "fall",
-      "category": "action",
-      "born": 3128,
-      "uses": 12,
-      "fitness": 0.15000000000000008,
-      "history": [
-        "netu"
-      ]
-    },
-    "wuroe": {
-      "meaning": "cold",
+    "mara": {
+      "meaning": "old",
       "category": "quality",
-      "born": 3129,
-      "uses": 14,
-      "fitness": 0.6999999999999993,
+      "born": 3260,
+      "uses": 21,
+      "fitness": 0.20000000000000046,
       "history": [
-        "wuroe"
+        "mara"
       ]
     },
-    "eimme": {
-      "meaning": "sky",
-      "category": "natural",
-      "born": 3132,
-      "uses": 6,
-      "fitness": 0.049999999999999906,
-      "history": [
-        "eimme"
-      ]
-    },
-    "otom": {
-      "meaning": "between",
+    "nasu": {
+      "meaning": "with",
       "category": "relation",
-      "born": 3133,
-      "uses": 11,
-      "fitness": 0.39999999999999997,
+      "born": 3263,
+      "uses": 17,
+      "fitness": 0.35000000000000026,
       "history": [
-        "otom"
+        "nasu"
       ]
     },
-    "mi": {
-      "meaning": "near",
+    "na": {
+      "meaning": "order",
+      "category": "abstract",
+      "born": 3265,
+      "uses": 15,
+      "fitness": 0.24999999999999983,
+      "history": [
+        "na"
+      ]
+    },
+    "ra": {
+      "meaning": "toward",
+      "category": "relation",
+      "born": 3271,
+      "uses": 14,
+      "fitness": 0.34999999999999865,
+      "history": [
+        "ra"
+      ]
+    },
+    "manmi": {
+      "meaning": "deep",
       "category": "quality",
-      "born": 3136,
-      "uses": 6,
-      "fitness": 0.35000000000000003,
+      "born": 3277,
+      "uses": 12,
+      "fitness": 0.25000000000000044,
       "history": [
-        "mi"
+        "manmi"
       ]
     },
-    "nuhane": {
-      "meaning": "rise",
-      "category": "action",
-      "born": 3137,
-      "uses": 8,
-      "fitness": 0.49999999999999994,
-      "history": [
-        "nuhane"
-      ]
-    },
-    "reeke": {
-      "meaning": "move",
-      "category": "action",
-      "born": 3139,
-      "uses": 3,
-      "fitness": 0.09999999999999991,
-      "history": [
-        "reeke"
-      ]
-    },
-    "tinurem": {
-      "meaning": "stone",
+    "mosena": {
+      "meaning": "star",
       "category": "natural",
-      "born": 3140,
+      "born": 3287,
+      "uses": 5,
+      "fitness": 0.15000000000000013,
+      "history": [
+        "mosena"
+      ]
+    },
+    "walema": {
+      "meaning": "through",
+      "category": "relation",
+      "born": 3288,
       "uses": 7,
+      "fitness": 0.4,
+      "history": [
+        "walema"
+      ]
+    },
+    "pimkula": {
+      "meaning": "grow",
+      "category": "action",
+      "born": 3289,
+      "uses": 8,
       "fitness": 0.5499999999999994,
       "history": [
-        "tinurem"
+        "pimkula"
       ]
     },
-    "nu": {
+    "sowuku": {
       "meaning": "new",
       "category": "quality",
-      "born": 3141,
-      "uses": 7,
-      "fitness": 0.39999999999999986,
-      "history": [
-        "nu"
-      ]
-    },
-    "weali": {
-      "meaning": "moon",
-      "category": "natural",
-      "born": 3144,
-      "uses": 6,
-      "fitness": 0.44999999999999996,
-      "history": [
-        "weali"
-      ]
-    },
-    "runi": {
-      "meaning": "release",
-      "category": "action",
-      "born": 3145,
-      "uses": 5,
-      "fitness": 0.5999999999999996,
-      "history": [
-        "runi"
-      ]
-    },
-    "rimeke": {
-      "meaning": "whole",
-      "category": "being",
-      "born": 3146,
-      "uses": 6,
-      "fitness": 0.15000000000000002,
-      "history": [
-        "rimeke"
-      ]
-    },
-    "navoma": {
-      "meaning": "none",
-      "category": "being",
-      "born": 3147,
-      "uses": 6,
-      "fitness": 0.5999999999999998,
-      "history": [
-        "navoma"
-      ]
-    },
-    "pukeni": {
-      "meaning": "break",
-      "category": "action",
-      "born": 3148,
-      "uses": 2,
-      "fitness": 0.35000000000000003,
-      "history": [
-        "pukeni"
-      ]
-    },
-    "vilaka": {
-      "meaning": "dark",
-      "category": "quality",
-      "born": 3149,
+      "born": 3290,
       "uses": 4,
       "fitness": 0.4,
       "history": [
-        "vilaka"
+        "sowuku"
       ]
     },
-    "heli": {
-      "meaning": "star",
-      "category": "natural",
-      "born": 3150,
+    "nita": {
+      "meaning": "one",
+      "category": "being",
+      "born": 3292,
+      "uses": 5,
+      "fitness": 0.5,
+      "history": [
+        "nita"
+      ]
+    },
+    "memummen": {
+      "meaning": "break",
+      "category": "action",
+      "born": 3293,
+      "uses": 7,
+      "fitness": 0.6499999999999996,
+      "history": [
+        "memummen"
+      ]
+    },
+    "otali": {
+      "meaning": "dark",
+      "category": "quality",
+      "born": 3296,
+      "uses": 1,
+      "fitness": 0.10000000000000003,
+      "history": [
+        "otali"
+      ]
+    },
+    "nenu": {
+      "meaning": "wave",
+      "category": "abstract",
+      "born": 3298,
+      "uses": 3,
+      "fitness": 0.5999999999999999,
+      "history": [
+        "nenu"
+      ]
+    },
+    "kutem": {
+      "meaning": "many",
+      "category": "being",
+      "born": 3299,
       "uses": 3,
       "fitness": 0.5499999999999999,
       "history": [
-        "heli"
+        "kutem"
       ]
     }
   },
@@ -5949,18 +5909,228 @@
       ],
       "compound_meaning": "cold-moon",
       "born": 3149
+    },
+    "lakeke": {
+      "parts": [
+        "lakuri",
+        "reeke"
+      ],
+      "meanings": [
+        "high",
+        "move"
+      ],
+      "compound_meaning": "high-move",
+      "born": 3153
+    },
+    "tinmne": {
+      "parts": [
+        "tinurem",
+        "alimne"
+      ],
+      "meanings": [
+        "stone",
+        "make"
+      ],
+      "compound_meaning": "stone-make",
+      "born": 3166
+    },
+    "rueam": {
+      "parts": [
+        "runi",
+        "hineam"
+      ],
+      "meanings": [
+        "release",
+        "find"
+      ],
+      "compound_meaning": "release-find",
+      "born": 3171
+    },
+    "malane": {
+      "parts": [
+        "malami",
+        "nuhane"
+      ],
+      "meanings": [
+        "fire",
+        "rise"
+      ],
+      "compound_meaning": "fire-rise",
+      "born": 3175
+    },
+    "namane": {
+      "parts": [
+        "namamun",
+        "nuhane"
+      ],
+      "meanings": [
+        "flow",
+        "rise"
+      ],
+      "compound_meaning": "flow-rise",
+      "born": 3179
+    },
+    "somun": {
+      "parts": [
+        "somtan",
+        "miun"
+      ],
+      "meanings": [
+        "cycle",
+        "water"
+      ],
+      "compound_meaning": "cycle-water",
+      "born": 3188
+    },
+    "ehmne": {
+      "parts": [
+        "ehase",
+        "alimne"
+      ],
+      "meanings": [
+        "fall",
+        "make"
+      ],
+      "compound_meaning": "fall-make",
+      "born": 3195
+    },
+    "ohmen": {
+      "parts": [
+        "oha",
+        "komen"
+      ],
+      "meanings": [
+        "ocean",
+        "small"
+      ],
+      "compound_meaning": "ocean-small",
+      "born": 3204
+    },
+    "sere": {
+      "parts": [
+        "se",
+        "ore"
+      ],
+      "meanings": [
+        "around",
+        "far"
+      ],
+      "compound_meaning": "around-far",
+      "born": 3220
+    },
+    "punemti": {
+      "parts": [
+        "punepe",
+        "halemti"
+      ],
+      "meanings": [
+        "flow",
+        "join"
+      ],
+      "compound_meaning": "flow-join",
+      "born": 3229
+    },
+    "vepre": {
+      "parts": [
+        "vepuma",
+        "kore"
+      ],
+      "meanings": [
+        "turn",
+        "chaos"
+      ],
+      "compound_meaning": "turn-chaos",
+      "born": 3231
+    },
+    "ranun": {
+      "parts": [
+        "raua",
+        "kinun"
+      ],
+      "meanings": [
+        "rain",
+        "slow"
+      ],
+      "compound_meaning": "rain-slow",
+      "born": 3236
+    },
+    "auin": {
+      "parts": [
+        "aua",
+        "min"
+      ],
+      "meanings": [
+        "rain",
+        "all"
+      ],
+      "compound_meaning": "rain-all",
+      "born": 3239
+    },
+    "sani": {
+      "parts": [
+        "sa",
+        "ani"
+      ],
+      "meanings": [
+        "space",
+        "seed"
+      ],
+      "compound_meaning": "space-seed",
+      "born": 3255
+    },
+    "sapele": {
+      "parts": [
+        "sa",
+        "kampele"
+      ],
+      "meanings": [
+        "space",
+        "cold"
+      ],
+      "compound_meaning": "space-cold",
+      "born": 3265
+    },
+    "tua": {
+      "parts": [
+        "tuza",
+        "ra"
+      ],
+      "meanings": [
+        "whole",
+        "toward"
+      ],
+      "compound_meaning": "whole-toward",
+      "born": 3288
+    },
+    "tite": {
+      "parts": [
+        "tiram",
+        "kute"
+      ],
+      "meanings": [
+        "sky",
+        "sun"
+      ],
+      "compound_meaning": "sky-sun",
+      "born": 3291
+    },
+    "pimlu": {
+      "parts": [
+        "pimkula",
+        "elu"
+      ],
+      "meanings": [
+        "grow",
+        "mountain"
+      ],
+      "compound_meaning": "grow-mountain",
+      "born": 3294
     }
   },
-  "generation": 3151,
+  "generation": 3300,
   "created": "2026-02-10T20:11:47.796968",
-  "last_evolved": "2026-02-11T12:15:59.080699",
+  "last_evolved": "2026-02-11T22:31:23.809229",
   "sound_shifts": [
-    {
-      "gen": 1098,
-      "from": "nonalan",
-      "to": "nomalan",
-      "meaning": "cycle"
-    },
     {
       "gen": 1197,
       "from": "lemoti",
@@ -6134,364 +6304,370 @@
       "from": "nisa",
       "to": "ngisa",
       "meaning": "ocean"
+    },
+    {
+      "gen": 3237,
+      "from": "raua",
+      "to": "aua",
+      "meaning": "rain"
     }
   ],
   "extinct": [
     {
-      "word": "lohim",
-      "meaning": "far",
-      "born": 3043,
-      "died": 3074,
-      "uses": 10
+      "word": "tehumpu",
+      "meaning": "deep",
+      "born": 3224,
+      "died": 3239,
+      "uses": 2
     },
     {
-      "word": "wimkene",
-      "meaning": "earth",
-      "born": 3052,
-      "died": 3076,
-      "uses": 12
-    },
-    {
-      "word": "uzama",
-      "meaning": "give",
-      "born": 3054,
-      "died": 3079,
-      "uses": 9
-    },
-    {
-      "word": "sim",
-      "meaning": "cloud",
-      "born": 3072,
-      "died": 3079,
-      "uses": 1
-    },
-    {
-      "word": "luan",
-      "meaning": "balance",
-      "born": 3036,
-      "died": 3081,
-      "uses": 17
-    },
-    {
-      "word": "haha",
-      "meaning": "hold",
-      "born": 3044,
-      "died": 3082,
-      "uses": 19
-    },
-    {
-      "word": "wizin",
-      "meaning": "river",
-      "born": 3071,
-      "died": 3084,
-      "uses": 1
-    },
-    {
-      "word": "mamvotam",
-      "meaning": "tree",
-      "born": 3056,
-      "died": 3085,
-      "uses": 10
-    },
-    {
-      "word": "sonnure",
-      "meaning": "make",
-      "born": 3058,
-      "died": 3085,
-      "uses": 11
-    },
-    {
-      "word": "wa",
-      "meaning": "star",
-      "born": 3053,
-      "died": 3086,
-      "uses": 12
-    },
-    {
-      "word": "una",
-      "meaning": "new",
-      "born": 3046,
-      "died": 3087,
-      "uses": 20
-    },
-    {
-      "word": "wemo",
-      "meaning": "time",
-      "born": 3082,
-      "died": 3091,
-      "uses": 1
-    },
-    {
-      "word": "ngisa",
-      "meaning": "ocean",
-      "born": 3064,
-      "died": 3093,
-      "uses": 11
-    },
-    {
-      "word": "ma",
-      "meaning": "seed",
-      "born": 3068,
-      "died": 3095,
-      "uses": 10
-    },
-    {
-      "word": "miroro",
-      "meaning": "part",
-      "born": 3081,
-      "died": 3100,
-      "uses": 18
-    },
-    {
-      "word": "u",
-      "meaning": "through",
-      "born": 3076,
-      "died": 3101,
-      "uses": 9
-    },
-    {
-      "word": "sati",
-      "meaning": "self",
-      "born": 3060,
-      "died": 3102,
-      "uses": 33
-    },
-    {
-      "word": "sewen",
-      "meaning": "fast",
-      "born": 3069,
-      "died": 3103,
-      "uses": 25
-    },
-    {
-      "word": "ata",
-      "meaning": "water",
-      "born": 3075,
-      "died": 3104,
+      "word": "punepe",
+      "meaning": "flow",
+      "born": 3201,
+      "died": 3240,
       "uses": 14
     },
     {
-      "word": "ume",
-      "meaning": "tree",
-      "born": 3089,
-      "died": 3104,
-      "uses": 6
+      "word": "nuu",
+      "meaning": "part",
+      "born": 3209,
+      "died": 3242,
+      "uses": 11
     },
     {
-      "word": "nurain",
-      "meaning": "rise",
-      "born": 3088,
-      "died": 3106,
-      "uses": 12
+      "word": "amha",
+      "meaning": "moon",
+      "born": 3216,
+      "died": 3243,
+      "uses": 8
     },
     {
-      "word": "maran",
-      "meaning": "whole",
-      "born": 3087,
-      "died": 3107,
-      "uses": 12
+      "word": "ore",
+      "meaning": "far",
+      "born": 3208,
+      "died": 3245,
+      "uses": 15
     },
     {
-      "word": "roka",
-      "meaning": "all",
-      "born": 3094,
-      "died": 3107,
+      "word": "mauna",
+      "meaning": "toward",
+      "born": 3233,
+      "died": 3246,
       "uses": 3
     },
     {
-      "word": "suna",
-      "meaning": "sun",
-      "born": 3063,
-      "died": 3108,
-      "uses": 22
-    },
-    {
-      "word": "sasi",
-      "meaning": "warm",
-      "born": 3048,
-      "died": 3113,
-      "uses": 37
-    },
-    {
-      "word": "iu",
-      "meaning": "move",
-      "born": 3090,
-      "died": 3115,
-      "uses": 15
-    },
-    {
-      "word": "kunaem",
-      "meaning": "new",
-      "born": 3095,
-      "died": 3119,
-      "uses": 12
-    },
-    {
-      "word": "hiniru",
-      "meaning": "space",
-      "born": 3098,
-      "died": 3121,
-      "uses": 8
-    },
-    {
-      "word": "noatem",
-      "meaning": "many",
-      "born": 3117,
-      "died": 3122,
-      "uses": 0
-    },
-    {
-      "word": "makikan",
-      "meaning": "small",
-      "born": 3104,
-      "died": 3123,
-      "uses": 6
-    },
-    {
-      "word": "ke",
-      "meaning": "pattern",
-      "born": 3073,
-      "died": 3124,
-      "uses": 25
-    },
-    {
-      "word": "takomi",
-      "meaning": "with",
-      "born": 3077,
-      "died": 3124,
-      "uses": 28
-    },
-    {
-      "word": "zuhone",
-      "meaning": "big",
-      "born": 3091,
-      "died": 3124,
-      "uses": 21
-    },
-    {
-      "word": "re",
-      "meaning": "begin",
-      "born": 3105,
-      "died": 3124,
-      "uses": 6
-    },
-    {
-      "word": "liti",
-      "meaning": "none",
-      "born": 3097,
-      "died": 3125,
-      "uses": 25
-    },
-    {
-      "word": "mike",
-      "meaning": "take",
-      "born": 3123,
-      "died": 3128,
-      "uses": 0
-    },
-    {
-      "word": "kimunon",
-      "meaning": "flow",
-      "born": 3092,
-      "died": 3129,
-      "uses": 23
-    },
-    {
-      "word": "amumam",
-      "meaning": "make",
-      "born": 3114,
-      "died": 3129,
-      "uses": 4
-    },
-    {
-      "word": "lamko",
-      "meaning": "bright",
-      "born": 3079,
-      "died": 3133,
-      "uses": 30
-    },
-    {
-      "word": "neza",
-      "meaning": "around",
-      "born": 3115,
-      "died": 3134,
-      "uses": 4
-    },
-    {
-      "word": "neaka",
-      "meaning": "tree",
-      "born": 3106,
-      "died": 3135,
-      "uses": 12
-    },
-    {
-      "word": "haam",
-      "meaning": "snow",
-      "born": 3134,
-      "died": 3139,
-      "uses": 0
-    },
-    {
-      "word": "perani",
-      "meaning": "find",
-      "born": 3080,
-      "died": 3140,
-      "uses": 40
-    },
-    {
-      "word": "maku",
-      "meaning": "grow",
-      "born": 3101,
-      "died": 3140,
-      "uses": 15
-    },
-    {
-      "word": "he",
-      "meaning": "cloud",
-      "born": 3121,
-      "died": 3145,
+      "word": "meha",
+      "meaning": "cold",
+      "born": 3229,
+      "died": 3247,
       "uses": 7
     },
     {
-      "word": "ki",
-      "meaning": "chaos",
-      "born": 3096,
-      "died": 3147,
-      "uses": 25
+      "word": "tasamhi",
+      "meaning": "beyond",
+      "born": 3223,
+      "died": 3249,
+      "uses": 9
     },
     {
-      "word": "wise",
-      "meaning": "begin",
-      "born": 3143,
-      "died": 3148,
+      "word": "miun",
+      "meaning": "water",
+      "born": 3179,
+      "died": 3250,
+      "uses": 30
+    },
+    {
+      "word": "halemti",
+      "meaning": "join",
+      "born": 3227,
+      "died": 3250,
+      "uses": 6
+    },
+    {
+      "word": "rinwa",
+      "meaning": "emergence",
+      "born": 3219,
+      "died": 3252,
+      "uses": 12
+    },
+    {
+      "word": "tanuo",
+      "meaning": "hard",
+      "born": 3231,
+      "died": 3254,
+      "uses": 10
+    },
+    {
+      "word": "min",
+      "meaning": "all",
+      "born": 3214,
+      "died": 3255,
+      "uses": 24
+    },
+    {
+      "word": "nino",
+      "meaning": "grow",
+      "born": 3220,
+      "died": 3255,
+      "uses": 13
+    },
+    {
+      "word": "sovi",
+      "meaning": "end",
+      "born": 3221,
+      "died": 3256,
+      "uses": 12
+    },
+    {
+      "word": "vepuma",
+      "meaning": "turn",
+      "born": 3230,
+      "died": 3259,
+      "uses": 11
+    },
+    {
+      "word": "ehase",
+      "meaning": "fall",
+      "born": 3181,
+      "died": 3260,
+      "uses": 38
+    },
+    {
+      "word": "sumemro",
+      "meaning": "rise",
+      "born": 3237,
+      "died": 3260,
+      "uses": 7
+    },
+    {
+      "word": "na",
+      "meaning": "within",
+      "born": 3217,
+      "died": 3262,
+      "uses": 18
+    },
+    {
+      "word": "vein",
+      "meaning": "star",
+      "born": 3226,
+      "died": 3262,
+      "uses": 14
+    },
+    {
+      "word": "tikei",
+      "meaning": "boundary",
+      "born": 3242,
+      "died": 3262,
+      "uses": 5
+    },
+    {
+      "word": "konu",
+      "meaning": "chaos",
+      "born": 3249,
+      "died": 3266,
+      "uses": 4
+    },
+    {
+      "word": "roamam",
+      "meaning": "whole",
+      "born": 3261,
+      "died": 3266,
       "uses": 0
     },
     {
-      "word": "minkin",
-      "meaning": "hard",
-      "born": 3113,
-      "died": 3149,
-      "uses": 15
+      "word": "amenwa",
+      "meaning": "self",
+      "born": 3247,
+      "died": 3267,
+      "uses": 9
     },
     {
-      "word": "umke",
-      "meaning": "old",
-      "born": 3109,
-      "died": 3151,
+      "word": "aua",
+      "meaning": "rain",
+      "born": 3236,
+      "died": 3269,
+      "uses": 13
+    },
+    {
+      "word": "ani",
+      "meaning": "seed",
+      "born": 3251,
+      "died": 3272,
+      "uses": 5
+    },
+    {
+      "word": "kinun",
+      "meaning": "slow",
+      "born": 3213,
+      "died": 3273,
+      "uses": 25
+    },
+    {
+      "word": "loma",
+      "meaning": "through",
+      "born": 3245,
+      "died": 3273,
+      "uses": 9
+    },
+    {
+      "word": "kohee",
+      "meaning": "whole",
+      "born": 3268,
+      "died": 3273,
+      "uses": 0
+    },
+    {
+      "word": "sa",
+      "meaning": "space",
+      "born": 3225,
+      "died": 3275,
+      "uses": 21
+    },
+    {
+      "word": "ero",
+      "meaning": "moon",
+      "born": 3253,
+      "died": 3275,
+      "uses": 6
+    },
+    {
+      "word": "kote",
+      "meaning": "snow",
+      "born": 3270,
+      "died": 3275,
+      "uses": 0
+    },
+    {
+      "word": "pesitu",
+      "meaning": "take",
+      "born": 3243,
+      "died": 3276,
+      "uses": 12
+    },
+    {
+      "word": "uao",
+      "meaning": "warm",
+      "born": 3238,
+      "died": 3281,
+      "uses": 22
+    },
+    {
+      "word": "enna",
+      "meaning": "flow",
+      "born": 3272,
+      "died": 3281,
+      "uses": 1
+    },
+    {
+      "word": "hin",
+      "meaning": "none",
+      "born": 3279,
+      "died": 3284,
+      "uses": 0
+    },
+    {
+      "word": "kampele",
+      "meaning": "cold",
+      "born": 3259,
+      "died": 3285,
+      "uses": 8
+    },
+    {
+      "word": "tahai",
+      "meaning": "soft",
+      "born": 3281,
+      "died": 3286,
+      "uses": 0
+    },
+    {
+      "word": "i",
+      "meaning": "time",
+      "born": 3244,
+      "died": 3287,
+      "uses": 16
+    },
+    {
+      "word": "entati",
+      "meaning": "join",
+      "born": 3257,
+      "died": 3287,
+      "uses": 10
+    },
+    {
+      "word": "vasinni",
+      "meaning": "pattern",
+      "born": 3264,
+      "died": 3287,
+      "uses": 6
+    },
+    {
+      "word": "rarei",
+      "meaning": "balance",
+      "born": 3282,
+      "died": 3287,
+      "uses": 0
+    },
+    {
+      "word": "nozuam",
+      "meaning": "break",
+      "born": 3273,
+      "died": 3289,
+      "uses": 3
+    },
+    {
+      "word": "tuza",
+      "meaning": "whole",
+      "born": 3274,
+      "died": 3291,
+      "uses": 10
+    },
+    {
+      "word": "inmenom",
+      "meaning": "fall",
+      "born": 3278,
+      "died": 3291,
+      "uses": 1
+    },
+    {
+      "word": "vamimse",
+      "meaning": "from",
+      "born": 3252,
+      "died": 3294,
+      "uses": 16
+    },
+    {
+      "word": "movi",
+      "meaning": "end",
+      "born": 3267,
+      "died": 3294,
+      "uses": 11
+    },
+    {
+      "word": "himrame",
+      "meaning": "release",
+      "born": 3254,
+      "died": 3295,
       "uses": 17
     },
     {
-      "word": "more",
-      "meaning": "fire",
-      "born": 3124,
-      "died": 3151,
-      "uses": 8
+      "word": "tiram",
+      "meaning": "sky",
+      "born": 3275,
+      "died": 3296,
+      "uses": 6
+    },
+    {
+      "word": "elu",
+      "meaning": "mountain",
+      "born": 3266,
+      "died": 3299,
+      "uses": 11
     }
   ],
   "stats": {
-    "total_generated": 2192,
-    "total_extinct": 2172,
-    "total_compounds": 479,
-    "total_shifts": 43
+    "total_generated": 2300,
+    "total_extinct": 2284,
+    "total_compounds": 497,
+    "total_shifts": 44
   }
 }
