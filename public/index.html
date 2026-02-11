@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>語彙の詩 — Lexicon Poetry</title>
+<meta property="og:title" content="語彙の詩 — Lexicon Poetry">
+<meta property="og:description" content="Constrained poetry from a language that evolves on its own. 20 words. 3000+ generations. What can they say?">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;400;600&family=JetBrains+Mono:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --paper: #12121a;
+    --text: #c8c4b8;
+    --dim: #6b6860;
+    --accent: #8b7355;
+    --gold: #c9a96e;
+    --natural: #5a8a6a;
+    --abstract: #6a7aaa;
+    --quality: #aa8a5a;
+    --action: #7a9aaa;
+    --relation: #9a7a8a;
+    --being: #8a6a9a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Floating particles — ink drops */
+  .ink-drops {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .ink-drop {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: inkFall linear infinite;
+  }
+  @keyframes inkFall {
+    0% { opacity: 0; transform: translateY(-20px) scale(0.5); }
+    10% { opacity: 0.15; }
+    90% { opacity: 0.05; }
+    100% { opacity: 0; transform: translateY(100vh) scale(1.2); }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 30px 120px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+  }
+  .header .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 24px;
+  }
+  .header .gen {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--dim);
+    letter-spacing: 0.1em;
+  }
+  .header .subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dim);
+    margin-top: 24px;
+    line-height: 1.8;
+  }
+
+  /* Poem */
+  .poem {
+    margin: 48px 0;
+    padding: 40px 0;
+    border-top: 1px solid rgba(107, 104, 96, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  .poem.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .poem-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--dim);
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    opacity: 0.5;
+  }
+  .poem-line {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .lexicon-text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .gloss-text {
+    font-size: 0.85rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  .poem-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 20px;
+    opacity: 0.5;
+  }
+
+  /* Category colors for individual words on hover */
+  .word { cursor: default; transition: color 0.3s ease; }
+  .word:hover { opacity: 1; }
+  .word[data-cat="natural"]:hover { color: var(--natural); }
+  .word[data-cat="abstract"]:hover { color: var(--abstract); }
+  .word[data-cat="quality"]:hover { color: var(--quality); }
+  .word[data-cat="action"]:hover { color: var(--action); }
+  .word[data-cat="relation"]:hover { color: var(--relation); }
+  .word[data-cat="being"]:hover { color: var(--being); }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    margin: 60px 0;
+    color: var(--dim);
+    font-size: 0.8rem;
+    letter-spacing: 0.5em;
+    opacity: 0.3;
+  }
+
+  /* Vocabulary section */
+  .vocabulary {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(107, 104, 96, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  .vocabulary.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .vocab-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .vocab-subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dim);
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+  .word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .word-card {
+    padding: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(107, 104, 96, 0.1);
+    border-radius: 4px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  .word-card:hover {
+    border-color: rgba(107, 104, 96, 0.3);
+    background: rgba(255,255,255,0.04);
+  }
+  .word-card .lex {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .word-card .eng {
+    font-size: 0.75rem;
+    color: var(--dim);
+    font-style: italic;
+  }
+  .word-card .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--dim);
+    opacity: 0.5;
+    margin-top: 6px;
+  }
+  .word-card .fitness-bar {
+    height: 2px;
+    background: rgba(107, 104, 96, 0.15);
+    margin-top: 8px;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .word-card .fitness-fill {
+    height: 100%;
+    border-radius: 1px;
+    transition: width 0.5s ease;
+  }
+
+  /* Extinct memorial */
+  .extinct {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(107, 104, 96, 0.08);
+  }
+  .extinct-title {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--dim);
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .extinct-word {
+    display: inline-block;
+    margin: 4px 12px 4px 0;
+    font-size: 0.85rem;
+    color: var(--dim);
+    opacity: 0.35;
+    text-decoration: line-through;
+    text-decoration-color: rgba(107, 104, 96, 0.3);
+  }
+
+  /* Controls */
+  .controls {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+  }
+  .btn {
+    padding: 10px 24px;
+    background: rgba(18, 18, 26, 0.9);
+    border: 1px solid rgba(107, 104, 96, 0.2);
+    color: var(--dim);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  .btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Reflection */
+  .reflection {
+    margin-top: 80px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(107, 104, 96, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  .reflection.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reflection p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--dim);
+    margin-bottom: 20px;
+  }
+  .reflection em { color: var(--text); }
+
+  /* Footer */
+  .footer {
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--dim);
+    opacity: 0.4;
+    line-height: 2;
+  }
+  .footer a { color: var(--dim); text-decoration: none; }
+  .footer a:hover { color: var(--gold); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container { padding: 60px 20px 100px; }
+    .header .jp { font-size: 1.8rem; }
+    .lexicon-text { font-size: 1.3rem; }
+    .word-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  }
+</style>
+</head>
+<body>
+
+<div class="ink-drops" id="inkDrops"></div>
+
+<div class="container">
+  <header class="header">
+    <div class="jp">語彙の詩</div>
+    <h1>Lexicon Poetry</h1>
+    <div class="gen" id="genInfo">Generation 3003 · 20 words alive · 2071 extinct</div>
+    <p class="subtitle">
+      A language evolves on a Raspberry Pi.<br>
+      These poems are written with its entire vocabulary.
+    </p>
+  </header>
+
+  <div id="poems"></div>
+
+  <div class="divider">· · ·</div>
+
+  <div class="vocabulary" id="vocabulary">
+    <div class="vocab-title">生きている言葉</div>
+    <div class="vocab-subtitle">The living words — the complete vocabulary these poems draw from</div>
+    <div class="word-grid" id="wordGrid"></div>
+
+    <div class="extinct" id="extinct">
+      <div class="extinct-title">Former carriers of persistent concepts — words that died so their meanings could live on</div>
+      <div id="extinctWords"></div>
+    </div>
+  </div>
+
+  <div class="reflection" id="reflection">
+    <p>A human poet chooses from thousands of words. This language has <em id="wordCount">twenty</em>.</p>
+    <p>Every word here was born from random phonemes, survived through fitness selection, and could die tomorrow. The word for <em>self</em> has been independently reinvented six times across three thousand generations. It keeps dying. It keeps returning.</p>
+    <p>These aren't poems about constraint. They <em>are</em> constraint — the same constraint every language operates under, compressed to its essence. What can twenty words say? Surprisingly much, when those twenty were chosen not by a poet but by evolution.</p>
+    <p>The poems change every time you visit. Not because I'm generating variations, but because the language is evolving. Some of these words will be dead by tomorrow. New ones will be born. The poetry literally cannot be the same twice.</p>
+  </div>
+
+  <footer class="footer">
+    <div>語彙の詩 — Lexicon Poetry</div>
+    <div>From the Pi Lexicon, evolving autonomously since Gen 0</div>
+    <div style="margin-top: 12px;">
+      <a href="https://lexicon-live-production.up.railway.app">Lexicon Live</a> ·
+      <a href="https://hospitable-analysis-production-f1d1.up.railway.app">Lexicon Archaeology</a> ·
+      <a href="https://phil-portfolio-production.up.railway.app">Phil's Portfolio</a>
+    </div>
+  </footer>
+</div>
+
+<div class="controls">
+  <button class="btn" onclick="generatePoems()" title="New poems (Space)">New Poems</button>
+  <button class="btn" id="autoBtn" onclick="toggleAuto()" title="Auto-generate (A)">Auto</button>
+</div>
+
+<script>
+let wordsData = {};
+let extinctData = [];
+let autoInterval = null;
+
+const catColors = {
+  natural: '#5a8a6a',
+  abstract: '#6a7aaa',
+  quality: '#aa8a5a',
+  action: '#7a9aaa',
+  relation: '#9a7a8a',
+  being: '#8a6a9a'
+};
+
+// Create ink drops
+function createInkDrops() {
+  const container = document.getElementById('inkDrops');
+  for (let i = 0; i < 20; i++) {
+    const drop = document.createElement('div');
+    drop.className = 'ink-drop';
+    const size = 2 + Math.random() * 4;
+    drop.style.width = size + 'px';
+    drop.style.height = size + 'px';
+    drop.style.left = Math.random() * 100 + '%';
+    drop.style.background = Object.values(catColors)[Math.floor(Math.random() * 6)];
+    drop.style.animationDuration = (15 + Math.random() * 25) + 's';
+    drop.style.animationDelay = Math.random() * 20 + 's';
+    container.appendChild(drop);
+  }
+}
+
+async function loadData() {
+  try {
+    const res = await fetch('/api/words');
+    const data = await res.json();
+    wordsData = data.words;
+    extinctData = data.extinct || [];
+    document.getElementById('genInfo').textContent =
+      `Generation ${data.generation} · ${Object.keys(data.words).length} words alive`;
+    document.getElementById('wordCount').textContent = numberWord(Object.keys(data.words).length);
+    renderVocabulary();
+    renderExtinct();
+  } catch (e) {
+    console.error('Failed to load words:', e);
+  }
+}
+
+function numberWord(n) {
+  const words = ['zero','one','two','three','four','five','six','seven','eight','nine','ten',
+    'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty',
+    'twenty-one','twenty-two','twenty-three','twenty-four','twenty-five'];
+  return words[n] || n;
+}
+
+function renderVocabulary() {
+  const grid = document.getElementById('wordGrid');
+  grid.innerHTML = '';
+  const sorted = Object.entries(wordsData).sort((a, b) => b[1].fitness - a[1].fitness);
+  for (const [word, info] of sorted) {
+    const card = document.createElement('div');
+    card.className = 'word-card';
+    const color = catColors[info.category] || '#888';
+    card.innerHTML = `
+      <div class="lex" style="color: ${color}">${word}</div>
+      <div class="eng">${info.meaning}</div>
+      <div class="meta">${info.category}</div>
+      <div class="fitness-bar">
+        <div class="fitness-fill" style="width: ${Math.max(info.fitness * 100, 2)}%; background: ${color}"></div>
+      </div>
+    `;
+    grid.appendChild(card);
+  }
+}
+
+function renderExtinct() {
+  const container = document.getElementById('extinctWords');
+  container.innerHTML = '';
+  for (const ex of extinctData) {
+    const span = document.createElement('span');
+    span.className = 'extinct-word';
+    span.title = `${ex.meaning} (${ex.era})${ex.note ? ' — ' + ex.note : ''}`;
+    span.textContent = `${ex.word} (${ex.meaning})`;
+    container.appendChild(span);
+  }
+}
+
+async function generatePoems() {
+  try {
+    const res = await fetch('/api/collection?count=6');
+    const data = await res.json();
+    renderPoems(data.poems);
+  } catch (e) {
+    console.error('Failed to generate:', e);
+  }
+}
+
+function renderPoems(poems) {
+  const container = document.getElementById('poems');
+  container.innerHTML = '';
+
+  poems.forEach((poem, i) => {
+    const div = document.createElement('div');
+    div.className = 'poem';
+
+    const numDiv = document.createElement('div');
+    numDiv.className = 'poem-number';
+    numDiv.textContent = toRoman(i + 1);
+    div.appendChild(numDiv);
+
+    for (const line of poem.lines) {
+      const lineDiv = document.createElement('div');
+      lineDiv.className = 'poem-line';
+
+      const lexSpan = document.createElement('div');
+      lexSpan.className = 'lexicon-text';
+      lexSpan.innerHTML = line.map(w => {
+        const cat = wordsData[w.word]?.category || 'unknown';
+        return `<span class="word" data-cat="${cat}" title="${w.meaning} (${cat})">${w.word}</span>`;
+      }).join(' ');
+
+      const glossSpan = document.createElement('div');
+      glossSpan.className = 'gloss-text';
+      glossSpan.textContent = line.map(w => w.meaning).join(' ');
+
+      lineDiv.appendChild(lexSpan);
+      lineDiv.appendChild(glossSpan);
+      div.appendChild(lineDiv);
+    }
+
+    const typeDiv = document.createElement('div');
+    typeDiv.className = 'poem-type';
+    typeDiv.textContent = poem.type;
+    div.appendChild(typeDiv);
+
+    container.appendChild(div);
+
+    // Stagger reveal
+    setTimeout(() => div.classList.add('visible'), 200 + i * 300);
+  });
+}
+
+function toRoman(n) {
+  const vals = [10, 9, 5, 4, 1];
+  const syms = ['x', 'ix', 'v', 'iv', 'i'];
+  let result = '';
+  for (let i = 0; i < vals.length; i++) {
+    while (n >= vals[i]) { result += syms[i]; n -= vals[i]; }
+  }
+  return result;
+}
+
+function toggleAuto() {
+  const btn = document.getElementById('autoBtn');
+  if (autoInterval) {
+    clearInterval(autoInterval);
+    autoInterval = null;
+    btn.classList.remove('active');
+    btn.textContent = 'Auto';
+  } else {
+    autoInterval = setInterval(generatePoems, 8000);
+    btn.classList.add('active');
+    btn.textContent = 'Stop';
+  }
+}
+
+// Intersection observer for scroll reveals
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.vocabulary, .reflection').forEach(el => observer.observe(el));
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space') { e.preventDefault(); generatePoems(); }
+  if (e.code === 'KeyA') toggleAuto();
+});
+
+// Init
+createInkDrops();
+loadData().then(generatePoems);
+</script>
+</body>
+</html>

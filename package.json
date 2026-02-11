@@ -1,0 +1,12 @@
+{
+  "name": "lexicon-poetry",
+  "version": "1.0.0",
+  "description": "Constrained poetry from Pi Lexicon vocabulary",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
